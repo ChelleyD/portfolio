@@ -10,6 +10,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Projects', 'Contact'];
@@ -27,8 +29,8 @@ function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+            <ListItemButton sx={{ textAlign: 'center'}}>
+              <ListItemText primary={item}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -41,7 +43,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       
-      <AppBar component="nav" sx={{bgcolor: 'black'}}>
+      <AppBar component="nav" sx={{bgcolor: 'transparent'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -55,7 +57,7 @@ function DrawerAppBar(props) {
           
           <Box sx={{ display: { xs: 'none', sm: 'block' }, mx: 'auto' }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: '#fff', textTransform: 'none' }}>
                 {item}
               </Button>
             ))}
