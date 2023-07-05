@@ -41,7 +41,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       
-      <AppBar component="nav" sx={{bgcolor: 'transparent'}}>
+      <AppBar component="nav" sx={{bgcolor: '#110526'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -55,7 +55,7 @@ function DrawerAppBar(props) {
           
           <Box sx={{ display: { xs: 'none', sm: 'block' }, mx: 'auto' }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff', textTransform: 'none' }}>
+              <Button key={item} sx={{ color: '#fff', textTransform: 'none', typography: 'body1' }}>
                 {item}
               </Button>
             ))}

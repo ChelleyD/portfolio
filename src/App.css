@@ -9,14 +9,31 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-color: purple;
-  height: 65vh;
-  padding-top: 15rem;
+  /* height: 65vh; */
+  padding-top: 15em;
+  padding-bottom: 15em;
 }
 
 #hero-text-wrapper {
   width: 50%;
   margin: auto;
 }
+
+#before-tabs {
+  margin-bottom: 3rem;
+}
+
+#projects {
+  /* background-color: black; */
+  background-color: black;
+  /* height: 100vh; */
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+}
+
+/* .project-card {
+
+} */
 
 /* tablet screen or smaller */
 @media (max-width: 1024px) {
@@ -33,6 +50,7 @@
 /* mobile */
 @media (max-width: 480px) {
   #hero {
-    padding-top: 5rem;
+    padding-top: 5em;
+    padding-bottom: 5em;
   }
 }
