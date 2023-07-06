@@ -19,7 +19,7 @@ const NonProgrammingProjectInfo = [
     },
     {
         previewImg: StudentAmbassador,
-        projectName: 'Student Ambassador for CS Transfers',
+        projectName: 'Student Ambassador',
         timeline: '3 months',
         subject: 'CS Transfer Students',
         myRoles: 'Student Ambassador',
