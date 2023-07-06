@@ -4,9 +4,12 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import ActionAreaCard from './ActionAreaCard';
-// import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import { CardActionArea, Typography } from '@mui/material';
+import ProgrammingProjectInfo from './Projects/ProgrammingProjectsInfo';
+import NonProgrammingProjectInfo from './Projects/NonProgrammingProjectsInfo';
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
@@ -14,6 +17,55 @@ export default function LabTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const PPI = ProgrammingProjectInfo.map((info) => 
+    <Grid sm={12} md={6} lg={4} xl={2} sx={{margin: 'auto'}}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea className="card-wrapper">
+          <CardMedia
+            component="img"
+            height="245"
+            // image="https://source.unsplash.com/random"
+            image={info.previewImg}
+            alt="random unsplash image"
+            className="card-image"
+          />
+
+          <div className="overlay-right-slide">
+            <div className="card-text">
+              <Typography variant='body1'>{info.projectName}</Typography>
+              <Typography variant='caption text'>{info.languages}</Typography>
+            </div>
+          </div>
+        </CardActionArea>
+      </Card>
+    </Grid>
+  );
+
+  const NPPI = NonProgrammingProjectInfo.map((info) => 
+  <Grid sm={12} md={6} lg={4} xl={2}>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea className="card-wrapper">
+        <CardMedia
+          component="img"
+          height="245"
+          // image="https://source.unsplash.com/random"
+          image={info.previewImg}
+          alt="random unsplash image"
+          className="card-image"
+        />
+
+        <div className="overlay-right-slide">
+          <div className="card-text">
+            <Typography variant='body1'>{info.projectName}</Typography>
+            <Typography variant='caption text'>{info.subject}</Typography>
+          </div>
+        </div>
+      </CardActionArea>
+    </Card>
+  </Grid>
+);
+
 
   return (
     <Box sx={{ width: '80%', typography: 'body1', margin: 'auto'}}>
@@ -26,53 +78,16 @@ export default function LabTabs() {
         </Box>
 
         {/* programming projects */}
-        <TabPanel value="1">
-          {/* <Stack direction="row" spacing={2}>
-            <ActionAreaCard/>
-            <ActionAreaCard/>
-            <ActionAreaCard/>
-          </Stack> */}
-          <Grid container spacing={5}>
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
+        <TabPanel value="1" centered>
+          <Grid container spacing={5}> {/* at smaller screens offset??? */}
+            {PPI}
           </Grid>
         </TabPanel>
 
         {/* non-programming projects */}
         <TabPanel value="2">
           <Grid container spacing={5}>
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
-
-            <Grid sm={12} md={6} lg={4} xl={2}>
-              <ActionAreaCard/>
-            </Grid>
+            {NPPI}
           </Grid>
         </TabPanel>
       </TabContext>

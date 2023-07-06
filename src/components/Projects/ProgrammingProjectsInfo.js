@@ -1,6 +1,13 @@
+import ArcadeGame from '../../images/programming-project-images/Blips and Chitz Arcade Game.png'
+import RegEx from '../../images/programming-project-images/Reg-Ex Puzzle.png'
+import ArcaneCards from '../../images/programming-project-images/Arcane Collectable Cards.png'
+import TheWorld from '../../images/programming-project-images/We are the World.png'
+import ShareMeals from '../../images/programming-project-images/Share Meals.png'
+import TorrisTies from "../../images/programming-project-images/Torri's Ties.png"
+
 const ProgrammingProjectInfo = [
     {
-        previewImg:'../images/programming-project-images/Arcane Collectable Cards.png',
+        previewImg: ArcadeGame,
         projectName: 'Blips and Chitz Arcade Game',
         timeline: '3 weeks',
         languages: 'HTML | CSS | jQuery | JavaScript',
@@ -26,7 +33,7 @@ const ProgrammingProjectInfo = [
         ],
     },
     {
-        previewImg:'',
+        previewImg: RegEx,
         projectName: 'Reg-Ex Puzzle',
         timeline: '2 weeks',
         languages: 'HTML | CSS | jQuery | JavaScript',
@@ -52,7 +59,7 @@ const ProgrammingProjectInfo = [
         ],
     },
     {
-        previewImg:'',
+        previewImg: ArcaneCards,
         projectName: 'Arcane Collectable Cards',
         timeline: '1 day',
         languages: 'React',
@@ -78,7 +85,7 @@ const ProgrammingProjectInfo = [
         ],
     },
     {
-        previewImg:'',
+        previewImg: TheWorld,
         projectName: 'We are the World',
         timeline: '1 week',
         languages: 'React',
@@ -104,7 +111,7 @@ const ProgrammingProjectInfo = [
         ],
     },
     {
-        previewImg:'',
+        previewImg: ShareMeals,
         projectName: 'Share Meals Toolkit',
         timeline: '3 weeks',
         languages: 'React',
@@ -130,7 +137,7 @@ const ProgrammingProjectInfo = [
         ],
     },
     {
-        previewImg:'',
+        previewImg: TorrisTies,
         projectName: 'Torri’s Ties',
         timeline: 'coming soon...',
         languages: 'React',
