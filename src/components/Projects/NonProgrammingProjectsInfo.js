@@ -42,3 +42,5 @@ const NonProgrammingProjectInfo = [
         process: '',
     },
 ]
+
+export default NonProgrammingProjectInfo

@@ -1,6 +1,6 @@
 const ProgrammingProjectInfo = [
     {
-        previewImg:'',
+        previewImg:'../images/programming-project-images/Arcane Collectable Cards.png',
         projectName: 'Blips and Chitz Arcade Game',
         timeline: '3 weeks',
         languages: 'HTML | CSS | jQuery | JavaScript',
@@ -156,3 +156,5 @@ const ProgrammingProjectInfo = [
         ],
     },
 ]
+
+export default ProgrammingProjectInfo

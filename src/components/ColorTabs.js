@@ -5,6 +5,8 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import ActionAreaCard from './ActionAreaCard';
+// import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Unstable_Grid2';
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
@@ -22,10 +24,57 @@ export default function LabTabs() {
             <Tab label="Non-Programming" value="2" sx={{textTransform: 'none', typography: 'body1'}}/>
           </TabList>
         </Box>
+
+        {/* programming projects */}
         <TabPanel value="1">
-          <ActionAreaCard/>
+          {/* <Stack direction="row" spacing={2}>
+            <ActionAreaCard/>
+            <ActionAreaCard/>
+            <ActionAreaCard/>
+          </Stack> */}
+          <Grid container spacing={5}>
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+          </Grid>
         </TabPanel>
-        <TabPanel value="2">Non-Programming</TabPanel>
+
+        {/* non-programming projects */}
+        <TabPanel value="2">
+          <Grid container spacing={5}>
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+
+            <Grid sm={12} md={6} lg={4} xl={2}>
+              <ActionAreaCard/>
+            </Grid>
+          </Grid>
+        </TabPanel>
       </TabContext>
     </Box>
   );
