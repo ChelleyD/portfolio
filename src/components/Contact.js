@@ -85,7 +85,7 @@ const Contact = () => {
 
   return (
     <div id='contact'>
-        <Typography variant='h3' gutterBottom='true' className='section-title'>
+        <Typography variant='h3' gutterBottom='true'>
             Contact
         </Typography>
 
@@ -107,11 +107,12 @@ const Contact = () => {
         </Stack>
 
         {/* make box smaller based on screen size */}
-        <Box
+    <Box
       component="form"
-      sx={{width: '25rem', margin: 'auto'}}
+      sx={{margin: 'auto'}}
       noValidate
       autoComplete="off"
+      className='form-section'
     >
         <Stack divider={<Divider orientation="vertical" flexItem/>} direction="column" justifyContent="center" alignItems="center" spacing={3}> 
             <ThemeProvider theme={customTheme(outerTheme)}>
