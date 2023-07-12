@@ -90,15 +90,15 @@ const Contact = () => {
         </Typography>
 
         <Stack direction="row" spacing={2} sx={{justifyContent: 'center', alignItems: 'center'}}>
-          <a href='https://www.linkedin.com/in/tamika-dantes' target='_blank' className='link'>
+          <a href='https://www.linkedin.com/in/tamika-dantes' target='_blank' rel="noreferrer" className='link'>
             <LinkedInIcon fontSize='large' id='before-form'/>
           </a>
 
-          <a href='https://github.com/ChelleyD' target='_blank' className='link'>
+          <a href='https://github.com/ChelleyD' target='_blank' rel="noreferrer" className='link'>
             <GitHubIcon fontSize='large' id='before-form'/>
           </a>
 
-          <a href='mailto: tamika.dantes@gmail.com' target='_blank' className='link'>
+          <a href='mailto: tamika.dantes@gmail.com' target='_blank' rel="noreferrer" className='link'>
             <EmailIcon fontSize='large' id='before-form'/>
           </a>
             
