@@ -6,7 +6,7 @@ import ColorTabs from './ColorTabs';
 const Projects = () => {
   return (
     <div id='projects'>
-        <Typography variant='h3' gutterBottom='true'>
+        <Typography variant='h3' gutterBottom='true' className='section-title'>
             Projects
         </Typography>
 

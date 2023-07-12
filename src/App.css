@@ -3,12 +3,13 @@
   color: white;
 }
 
-#hero {
+/* hero */
+#home {
   background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: purple;
+  background-color: #110526;
   /* height: 65vh; */
   padding-top: 15em;
   padding-bottom: 15em;
@@ -26,8 +27,46 @@
 #projects {
   background-color: black;
   /* background-color: purple; */
-  padding-top: 1.5em;
-  padding-bottom: 2em;
+  padding-top: 5em;
+  padding-bottom: 4.5em;
+}
+
+#contact {
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #110526;
+  padding-top: 5em;
+  padding-bottom: 4.5em;
+}
+
+#before-form {
+  margin-bottom: 2rem;
+}
+
+#footer {
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:visited, .link:active {
+  color: white;
+}
+
+.link:hover {
+  /* color: #110526; */
+  color: #A683D7;
+}
+
+.drawer-link {
+  color: #110526;
 }
 
 /* ---------------------Project Card---------------------- */
@@ -80,7 +119,8 @@
 
 /* tablet screen or smaller */
 @media (max-width: 1024px) {
-  #hero {
+  /* hero */
+  #home {
     background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/background.png');
   }
 
@@ -92,7 +132,8 @@
 
 /* mobile */
 @media (max-width: 480px) {
-  #hero {
+  /* hero */
+  #home {
     padding-top: 5em;
     padding-bottom: 5em;
   }

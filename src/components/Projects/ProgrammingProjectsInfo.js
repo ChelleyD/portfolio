@@ -23,14 +23,7 @@ const ProgrammingProjectInfo = [
             }
         ],
         keyTakeaways: '',
-        process: [
-            {
-                img1: '',
-                img2: '',
-                img3: '',
-                // etc...
-            }
-        ],
+        process: ['img1', 'img2', 'img3'],
     },
     {
         previewImg: RegEx,
@@ -49,14 +42,7 @@ const ProgrammingProjectInfo = [
             }
         ],
         keyTakeaways: '',
-        process: [
-            {
-                img1: '',
-                img2: '',
-                img3: '',
-                // etc...
-            }
-        ],
+        process: ['img1', 'img2', 'img3'],
     },
     {
         previewImg: ArcaneCards,
@@ -75,14 +61,7 @@ const ProgrammingProjectInfo = [
             }
         ],
         keyTakeaways: '',
-        process: [
-            {
-                img1: '',
-                img2: '',
-                img3: '',
-                // etc...
-            }
-        ],
+        process: ['img1', 'img2', 'img3'],
     },
     {
         previewImg: TheWorld,
@@ -101,14 +80,7 @@ const ProgrammingProjectInfo = [
             }
         ],
         keyTakeaways: '',
-        process: [
-            {
-                img1: '',
-                img2: '',
-                img3: '',
-                // etc...
-            }
-        ],
+        process: ['img1', 'img2', 'img3'],
     },
     {
         previewImg: ShareMeals,
@@ -127,14 +99,7 @@ const ProgrammingProjectInfo = [
             }
         ],
         keyTakeaways: '',
-        process: [
-            {
-                img1: '',
-                img2: '',
-                img3: '',
-                // etc...
-            }
-        ],
+        process: ['img1', 'img2', 'img3'],
     },
     {
         previewImg: TorrisTies,
@@ -143,7 +108,7 @@ const ProgrammingProjectInfo = [
         languages: 'React',
         myRoles: 'UI Designer | Front End Developer | Project Manager',
         tools: 'Visual Studio Code | GitHub | Netlify',
-        overview: '',
+        overview: 'blah!',
         problem: '',
         solution: '',
         finalProduct: [
@@ -153,14 +118,7 @@ const ProgrammingProjectInfo = [
             }
         ],
         keyTakeaways: '',
-        process: [
-            {
-                img1: '',
-                img2: '',
-                img3: '',
-                // etc...
-            }
-        ],
+        process: ['img1', 'img2', 'img3'],
     },
 ]
 

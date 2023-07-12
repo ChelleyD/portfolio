@@ -10,9 +10,10 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import { HashLink as Link } from 'react-router-hash-link'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Projects', 'Contact'];
+const navItems = ['home', 'projects', 'contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -26,11 +27,13 @@ function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center'}}>
-              <ListItemText primary={item}/>
-            </ListItemButton>
-          </ListItem>
+          <Link to={`#${item}`} smooth style={{textDecoration: 'none'}} className='drawer-link'>
+            <ListItem key={item} disablePadding>
+              <ListItemButton sx={{ textAlign: 'center'}}>
+                <ListItemText primary={item} sx={{textTransform: 'capitalize'}}/>
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -55,13 +58,18 @@ function DrawerAppBar(props) {
           
           <Box sx={{ display: { xs: 'none', sm: 'block' }, mx: 'auto' }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff', textTransform: 'none', typography: 'body1' }}>
-                {item}
-              </Button>
+              // navigation buttons
+              <Link to={`#${item}`} smooth>
+                <Button key={item} sx={{ color: '#fff', textTransform: 'capitalize', typography: 'body1' }} href="">
+                  {item}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
+
+      {/* mobile */}
       <Box component="nav">
         <Drawer
           container={container}

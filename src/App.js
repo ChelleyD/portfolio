@@ -7,6 +7,8 @@ import DrawerAppBar from './components/DrawerAppBar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const theme = createTheme({
   palette: {
@@ -26,6 +28,8 @@ function App() {
         <DrawerAppBar/>
         <Hero/>
         <Projects/>
+        <Contact/>
+        <Footer/>
       </div>
     </ThemeProvider>
   );
