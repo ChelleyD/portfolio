@@ -3,5 +3,9 @@
 - npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 - npm install @fontsource/roboto
 - npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
-- npm i @babel/plugin-proposal-private-property-in-object (fixes babel warning)
+- npm install @babel/plugin-proposal-private-property-in-object (fixes babel warning)
 - npm install @mui/lab @mui/material
+- npm install react-router-dom
+- npm install react-router-hash-link
+- npm install react-dotenv
+- npm install @emailjs/browser

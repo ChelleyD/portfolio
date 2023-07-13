@@ -13,6 +13,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 
 //
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 const customTheme = (outerTheme) =>
   createTheme({
     palette: {
@@ -78,10 +81,24 @@ const customTheme = (outerTheme) =>
       },
     },
   });
-//
 
 const Contact = () => {
     const outerTheme = useTheme();
+
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(`${process.env.REACT_APP_YOUR_SERVICE_ID}`, `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_YOUR_PUBLIC_KEY}`)
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <div id='contact'>
@@ -122,14 +139,17 @@ const Contact = () => {
       noValidate
       autoComplete="off"
       className='form-section'
+      ref={form} 
+      onSubmit={sendEmail}
     >
+      
         <Stack divider={<Divider orientation="vertical" flexItem/>} direction="column" justifyContent="center" alignItems="center" spacing={3}> 
             <ThemeProvider theme={customTheme(outerTheme)}>
-                <TextField fullWidth id="outlined-basic" label="Name" variant="outlined" InputLabelProps={{sx: {color: 'white'}, }} inputProps={{sx: {color: 'white' }, }}/>
-                <TextField fullWidth id="outlined-basic" label="Email" variant="outlined" InputLabelProps={{sx: {color: 'white'}, }} inputProps={{sx: {color: 'white' }, }}/>
-                <TextField fullWidth id="outlined-basic" label="Message" variant="outlined" multiline rows={4} InputLabelProps={{sx: {color: 'white'}, }} inputProps={{sx: {color: 'white' }, }}/>
+                  <TextField fullWidth type='text' name="user_name" id="outlined-basic" label="Name" variant="outlined" InputLabelProps={{sx: {color: 'white'}, }} inputProps={{sx: {color: 'white' }, }}/>
+                  <TextField fullWidth type='email' name="user_email" id="outlined-basic" label="Email" variant="outlined" InputLabelProps={{sx: {color: 'white'}, }} inputProps={{sx: {color: 'white' }, }}/>
+                  <TextField fullWidth type='text' name="message" id="outlined-basic" label="Message" variant="outlined" multiline rows={4} InputLabelProps={{sx: {color: 'white'}, }} inputProps={{sx: {color: 'white' }, }}/> 
             </ThemeProvider>
-            <Button variant="contained"  color="secondary" sx={{ textTransform: 'none', typography: 'body1' }} onClick={() => {alert('clicked');}}>Submit</Button>
+            <Button type='submit' value="Send" variant="contained"  color="secondary" sx={{ textTransform: 'none', typography: 'body1' }} onClick={() => {alert('Message Submitted');}}>Submit</Button>
         </Stack>
     </Box>
         
