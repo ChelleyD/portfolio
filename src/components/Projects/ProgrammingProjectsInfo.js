@@ -7,6 +7,7 @@ import TorrisTies from "../../images/programming-project-images/Torri's Ties.png
 
 const ProgrammingProjectInfo = [
     {
+        projectNum: 1,
         previewImg: ArcadeGame,
         projectName: 'Blips and Chitz Arcade Game',
         timeline: '3 weeks',
@@ -26,6 +27,7 @@ const ProgrammingProjectInfo = [
         process: ['img1', 'img2', 'img3'],
     },
     {
+        projectNum: 2,
         previewImg: RegEx,
         projectName: 'Reg-Ex Puzzle',
         timeline: '2 weeks',
@@ -45,6 +47,7 @@ const ProgrammingProjectInfo = [
         process: ['img1', 'img2', 'img3'],
     },
     {
+        projectNum: 3,
         previewImg: ArcaneCards,
         projectName: 'Arcane Collectable Cards',
         timeline: '1 day',
@@ -64,6 +67,7 @@ const ProgrammingProjectInfo = [
         process: ['img1', 'img2', 'img3'],
     },
     {
+        projectNum: 4,
         previewImg: TheWorld,
         projectName: 'We are the World',
         timeline: '1 week',
@@ -83,6 +87,7 @@ const ProgrammingProjectInfo = [
         process: ['img1', 'img2', 'img3'],
     },
     {
+        projectNum: 5,
         previewImg: ShareMeals,
         projectName: 'Share Meals Toolkit',
         timeline: '3 weeks',
@@ -102,6 +107,7 @@ const ProgrammingProjectInfo = [
         process: ['img1', 'img2', 'img3'],
     },
     {
+        projectNum: 6,
         previewImg: TorrisTies,
         projectName: 'Torri’s Ties',
         timeline: 'coming soon...',

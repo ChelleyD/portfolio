@@ -121,6 +121,15 @@
 }
 /* ------------------------------------------------------- */
 
+#project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  padding-bottom: 5rem;
+  row-gap: 20px;
+}
+
 /* tablet screen or smaller */
 @media (max-width: 1024px) {
   /* hero */
