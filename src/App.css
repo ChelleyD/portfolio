@@ -126,8 +126,32 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
-  padding-bottom: 5rem;
-  row-gap: 20px;
+  /* padding-bottom: 5rem; */
+  row-gap: 1.5rem;
+}
+
+.casestudy-section {
+  margin-top: 1rem;
+}
+
+.casestudy-section-body {
+  margin: 1rem 0;
+}
+
+.process-img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.process-img {
+  width: 25rem;
+  aspect-ratio: 16/9;
+  border-radius: .5rem;
+  border: solid black 1px;
 }
 
 /* tablet screen or smaller */
@@ -153,5 +177,20 @@
 
   .form-section {
     width: 19rem;
+  }
+
+  .process-img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  
+  .process-img {
+    width: 15rem;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
   }
 }

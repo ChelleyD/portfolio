@@ -1,74 +1,88 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea, Typography } from '@mui/material';
-import Divider from '@mui/material/Divider';
-import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import ArcadeGame from '../../images/programming-project-images/Blips and Chitz Arcade Game.png'
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea, Typography } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import ArcadeGame from "../../images/programming-project-images/Blips and Chitz Arcade Game.png";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+import MM3 from "../../images/programming-project-images/bnc-arcade-process-images/MM 3.png";
+import MM4 from "../../images/programming-project-images/bnc-arcade-process-images/MM 4.png";
+import MM5 from "../../images/programming-project-images/bnc-arcade-process-images/MM 5.png";
+import MM6 from "../../images/programming-project-images/bnc-arcade-process-images/MM 6.png";
+import MM7 from "../../images/programming-project-images/bnc-arcade-process-images/MM 7.png";
+import MM8 from "../../images/programming-project-images/bnc-arcade-process-images/MM 8.png";
+import MM9 from "../../images/programming-project-images/bnc-arcade-process-images/MM 9.png";
+import MM10 from "../../images/programming-project-images/bnc-arcade-process-images/MM 10.png";
+import MM11 from "../../images/programming-project-images/bnc-arcade-process-images/MM 11.png";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-    '& .MuiDialogContent-root': {
-      padding: theme.spacing(2),
-    },
-    '& .MuiDialogActions-root': {
-      padding: theme.spacing(1),
-    },
-  }));
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(2),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
+}));
 
-  function BootstrapDialogTitle(props) {
-    const { children, onClose, ...other } = props;
-  
-    return (
-      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-        {children}
-        {onClose ? (
-          <IconButton
-            aria-label="close"
-            onClick={onClose}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-    );
-  }
-  
-  BootstrapDialogTitle.propTypes = {
-    children: PropTypes.node,
-    onClose: PropTypes.func.isRequired,
-  };
-    
+function BootstrapDialogTitle(props) {
+  const { children, onClose, ...other } = props;
+
+  return (
+    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+      {children}
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </DialogTitle>
+  );
+}
+
+BootstrapDialogTitle.propTypes = {
+  children: PropTypes.node,
+  onClose: PropTypes.func.isRequired,
+};
 
 const PP1 = () => {
-    const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-    const handleClose = () => {
-      setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div>
       {/* on click of ActionArea, open modal */}
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea className="card-wrapper btn-modal" onClick={handleClickOpen}> 
+      <Card sx={{ width: 345 }}>
+        <CardActionArea
+          className="card-wrapper btn-modal"
+          onClick={handleClickOpen}
+        >
           <CardMedia
             component="img"
             height="245"
@@ -80,88 +94,244 @@ const PP1 = () => {
 
           <div className="overlay-right-slide">
             <div className="card-text">
-              <Typography variant='body1'>Blips and Chitz Arcade Game</Typography>
-              <Typography variant='caption text'>HTML | CSS | jQuery | JavaScript</Typography>
+              <Typography variant="body1">
+                Blips and Chitz Arcade Game
+              </Typography>
+              <Typography variant="caption text">
+                HTML | CSS | jQuery | JavaScript
+              </Typography>
             </div>
           </div>
         </CardActionArea>
       </Card>
-      
-    <BootstrapDialog
+
+      <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-        fullWidth='true'
-        maxWidth='xl'
-        scroll='paper'
+        fullWidth="true"
+        maxWidth="md"
+        scroll="paper"
       >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <Typography variant='h4'>
-            Blips and Chitz Arcade Game
+        <BootstrapDialogTitle
+          id="customized-dialog-title"
+          onClose={handleClose}
+        >
+          <Typography variant="h4">
+            <b>Blips and Chitz Arcade Game</b>
+          </Typography>
+          <Typography>
+            <b>Timeline:</b> 3 weeks
+          </Typography>
+          <Stack direction="row" spacing={1}>
+            <Typography>
+              <b>Languages:</b>
+            </Typography>
+            <Chip label="HTML" sx={{ bgcolor: "lightblue" }} size="small" />
+            <Chip label="CSS" sx={{ bgcolor: "lightgreen" }} size="small" />
+            <Chip label="jQuery" sx={{ bgcolor: "pink" }} size="small" />
+            <Chip label="JavaScript" color="default" size="small" />
+          </Stack>
+          <Typography>
+            <b>Languages:</b> HTML | CSS | jQuery | JavaScript
+          </Typography>
+          <Typography>
+            <b>Roles:</b> UI Designer | Front End Developer | Project Manager
+          </Typography>
+          <Typography>
+            <b>Tools:</b> Adobe Photoshop | Mterialize CSS | Jamboard | Replit |
+            GitHub
           </Typography>
         </BootstrapDialogTitle>
 
         <DialogContent dividers>
+          {/* new section */}
+          <div>
+            <Typography variant="h5" gutterBottom>
+              <b>Overview</b>
+            </Typography>
+            <Divider />
+            <div className="casestudy-section-body">
+              <Typography gutterBottom>
+                I spare-headed UI/UX designs, project planning/management and
+                front-end programming. With a team of 2 others, created a themed
+                virtual arcade machine. Completed games include:
+                <ul>
+                  <li>Prison Break (Speed Typing)</li>
+                  <li>Wrenches & Gears (Tic-Tac-Toe)</li>
+                </ul>
+                I also contributed to some of the games’ logic code/features.
+                Due to limited time and knowledge, we were unable to complete
+                the project before the end of the bootcamp. However, I …….
+              </Typography>
+            </div>
+          </div>
+          
+          {/* new section */}
+          <div className="casestudy-section">
+            <Typography variant="h5" gutterBottom>
+              <b>Problem</b>
+            </Typography>
+            <Divider />
+            <div className="casestudy-section-body">
+              <Typography gutterBottom>
+                The premise for my capstone project for the MEC TTP Summer 2021
+                Bootcamp was as follows:
+                <blockquote>
+                  Your feet have been accidentally zapped by Rick's Portal Gun
+                  and transported to a random dimension. (Each dimension = 1
+                  room). You must solve a complicated, web based puzzle / game
+                  to jump to the next dimension, eventually (maybe) making it
+                  back home.
+                </blockquote>
+              </Typography>
+            </div>
+          </div>
 
-          <Typography variant='h5'>Overview</Typography>
-          <Divider variant="middle" />
-          <Typography gutterBottom>
-            blah blah blah
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Mauris rhoncus aenean vel elit scelerisque mauris. Sit amet justo donec enim diam vulputate ut. Urna id volutpat lacus laoreet. Sit amet consectetur adipiscing elit ut aliquam purus sit amet. Consectetur adipiscing elit pellentesque habitant. Enim nunc faucibus a pellentesque. Sollicitudin tempor id eu nisl nunc mi. Senectus et netus et malesuada fames ac turpis. Leo integer malesuada nunc vel risus commodo. Nunc lobortis mattis aliquam faucibus purus. Sem et tortor consequat id. Enim diam vulputate ut pharetra sit amet aliquam. Mauris rhoncus aenean vel elit. Enim diam vulputate ut pharetra sit amet aliquam.
+          {/* new section */}
+          <div className="casestudy-section">
+            <Typography variant="h5" gutterBottom>
+              <b>Solution</b>
+            </Typography>
+            <Divider />
+            <div className="casestudy-section-body">
+              <Typography gutterBottom>
+                After my team and I settled on doing something arcade related, I
+                pitched the idea to theme it around Blips and Chitz. Blips and
+                Chitz is an intergalactic arcade which exists in the Rick and
+                Morty universe. Beings from various dimensions frequent this
+                place so it seemed ideal given the prompt.
+              </Typography>
 
-In massa tempor nec feugiat nisl pretium fusce id. Ut diam quam nulla porttitor massa id neque. Tempus egestas sed sed risus pretium quam vulputate dignissim. Sed enim ut sem viverra aliquet eget. Commodo odio aenean sed adipiscing diam donec. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Cursus eget nunc scelerisque viverra mauris in aliquam. Elementum pulvinar etiam non quam lacus. Sit amet nisl purus in mollis nunc sed. Fermentum odio eu feugiat pretium nibh ipsum. Ultrices neque ornare aenean euismod elementum nisi quis. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Et netus et malesuada fames ac. Senectus et netus et malesuada fames. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque.
+              <Typography gutterBottom>
+                The rules are simple. Successfully beat all games on screen.
+                After each win, a fragment of a code will be awarded. These
+                fragments must be put together and entered into the code panel,
+                in order to leave this room.
+              </Typography>
+            </div>
+          </div>
 
-Pharetra convallis posuere morbi leo urna molestie. Et odio pellentesque diam volutpat commodo. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Augue interdum velit euismod in pellentesque. Ornare quam viverra orci sagittis eu volutpat odio facilisis. In cursus turpis massa tincidunt dui ut ornare lectus. Malesuada proin libero nunc consequat interdum varius sit. Sapien pellentesque habitant morbi tristique senectus et. Mauris a diam maecenas sed. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl. At tempor commodo ullamcorper a. Dolor magna eget est lorem ipsum dolor sit amet. Scelerisque eu ultrices vitae auctor eu augue ut. At varius vel pharetra vel turpis nunc. Viverra maecenas accumsan lacus vel facilisis volutpat est velit.
+          {/* new section */}
+          <div className="casestudy-section">
+            <Typography variant="h5" gutterBottom>
+              <b>Final Product</b>
+            </Typography>
+            <Divider />
+            <div className="casestudy-section-body">
+              <Typography gutterBottom>blah blah blah</Typography>
+              <iframe
+                width="100%"
+                style={{ aspectRatio: "16/9" }}
+                src="https://www.youtube.com/embed/AkknY9nAYak"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
+              <a
+                href="https://ttp-code-quest.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button variant="text" sx={{ textTransform: "capitalize" }}>
+                  Live Demo
+                </Button>
+              </a>{" "}
+              |
+              <a
+                href="https://github.com/ChelleyD/ChelleyD.github.io"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button variant="text" sx={{ textTransform: "capitalize" }}>
+                  Source Code
+                </Button>
+              </a>
+            </div>
+          </div>
 
-Id leo in vitae turpis massa sed elementum. Duis ut diam quam nulla porttitor massa. Sit amet luctus venenatis lectus magna. Vitae purus faucibus ornare suspendisse sed. Varius vel pharetra vel turpis nunc eget. Scelerisque eu ultrices vitae auctor eu augue. Massa ultricies mi quis hendrerit dolor magna eget. Tortor pretium viverra suspendisse potenti nullam ac. Id consectetur purus ut faucibus pulvinar. Egestas congue quisque egestas diam in arcu. Quis lectus nulla at volutpat diam ut venenatis tellus in. Orci ac auctor augue mauris augue. Dolor sit amet consectetur adipiscing elit ut. At elementum eu facilisis sed.
+          {/* new section */}
+          <div className="casestudy-section-body">
+            <Typography variant="h5" gutterBottom>
+              <b>Key Takeaways</b>
+            </Typography>
+            <Divider />
+            <div className="casestudy-section-body">
+              <Typography gutterBottom>
+                <ul>
+                  <li>
+                    What I learnt: drawing with CSS, pseudo classes and
+                    elements, how to check session storage for data, manipulate
+                    CSS through JQuery
+                  </li>
+                  <li>
+                    Mistakes made: the first iteration of this project used a
+                    static background image which resulted in a misalignment
+                    with the arcade machine’s screen and its text. To remedy
+                    this, I researched drawing with CSS.
+                  </li>
+                  <li>
+                    What I would do differently: project might have been too
+                    ambitious given time frame and skill level so I’d scale back
+                    or choose simpler games.
+                  </li>
+                </ul>
+              </Typography>
+            </div>
+          </div>
 
-Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Fermentum posuere urna nec tincidunt praesent semper. Rhoncus dolor purus non enim praesent elementum. Convallis a cras semper auctor neque. Ut sem viverra aliquet eget sit amet tellus. Iaculis urna id volutpat lacus laoreet non. Enim praesent elementum facilisis leo vel. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Diam maecenas sed enim ut sem viverra aliquet eget. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. At tempor commodo ullamcorper a lacus vestibulum sed. Ultrices gravida dictum fusce ut placerat orci.
-
-Pulvinar sapien et ligula ullamcorper. Nulla pellentesque dignissim enim sit amet venenatis urna cursus. Eget duis at tellus at. Neque viverra justo nec ultrices dui sapien. Ac turpis egestas integer eget aliquet nibh. Nunc consequat interdum varius sit amet. Mi sit amet mauris commodo quis. Ut sem nulla pharetra diam sit amet nisl. Nam libero justo laoreet sit amet cursus. Nibh praesent tristique magna sit amet purus gravida.
-
-Odio ut enim blandit volutpat maecenas volutpat blandit. Tristique senectus et netus et. Blandit turpis cursus in hac habitasse platea dictumst. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Tincidunt lobortis feugiat vivamus at augue eget arcu. Maecenas sed enim ut sem viverra aliquet eget sit amet. Tristique sollicitudin nibh sit amet commodo nulla facilisi. Amet massa vitae tortor condimentum lacinia quis vel eros. Bibendum ut tristique et egestas quis ipsum suspendisse. Et tortor at risus viverra adipiscing at in tellus integer. Mauris pharetra et ultrices neque ornare. Fames ac turpis egestas integer eget. Volutpat diam ut venenatis tellus in metus vulputate eu.
-
-Sodales ut eu sem integer vitae justo eget magna. Lectus magna fringilla urna porttitor rhoncus dolor purus. Ac felis donec et odio pellentesque. Enim ut sem viverra aliquet eget. Vel turpis nunc eget lorem. Maecenas pharetra convallis posuere morbi leo urna. Scelerisque in dictum non consectetur a. Hendrerit dolor magna eget est lorem ipsum dolor sit. Faucibus pulvinar elementum integer enim. Id eu nisl nunc mi ipsum. Aenean et tortor at risus viverra adipiscing. Sit amet massa vitae tortor condimentum. Turpis massa sed elementum tempus egestas sed sed risus pretium. Fusce ut placerat orci nulla pellentesque. Risus nullam eget felis eget nunc lobortis mattis. In vitae turpis massa sed elementum.
-
-Elementum sagittis vitae et leo. Etiam sit amet nisl purus. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Imperdiet sed euismod nisi porta. Purus viverra accumsan in nisl nisi. Dignissim sodales ut eu sem integer vitae justo. At risus viverra adipiscing at in. Sagittis vitae et leo duis ut. Aliquet sagittis id consectetur purus ut faucibus. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Senectus et netus et malesuada fames ac turpis. Viverra justo nec ultrices dui sapien eget mi. Viverra mauris in aliquam sem fringilla ut. Neque ornare aenean euismod elementum nisi quis. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
-
-Id faucibus nisl tincidunt eget. Ut placerat orci nulla pellentesque dignissim. Amet mattis vulputate enim nulla. Nisl vel pretium lectus quam id leo in vitae. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Sagittis vitae et leo duis ut diam quam nulla porttitor. Semper auctor neque vitae tempus quam pellentesque. Tellus orci ac auctor augue mauris augue neque gravida in. Aliquam vestibulum morbi blandit cursus risus at ultrices. Odio ut sem nulla pharetra diam sit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Leo a diam sollicitudin tempor. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Molestie ac feugiat sed lectus. Velit egestas dui id ornare arcu odio ut sem nulla. Volutpat est velit egestas dui id. Sed viverra tellus in hac habitasse. Risus feugiat in ante metus dictum at tempor commodo. Vivamus arcu felis bibendum ut.
-          </Typography>
-
-          <Typography variant='h5'>Problem</Typography>
-          <Typography gutterBottom>
-            blah blah blah
-          </Typography>
-
-          <Typography variant='h5'>Solution</Typography>
-          <Typography gutterBottom>
-            blah blah blah
-          </Typography>
-
-          <Typography variant='h5'>Final Product</Typography>
-          <Typography gutterBottom>
-            blah blah blah
-          </Typography>
-
-          <Typography variant='h5'>Key Takeaways</Typography>
-          <Typography gutterBottom>
-            blah blah blah
-          </Typography>
-
-          <Typography variant='h5'>Process</Typography>
-          <Typography gutterBottom>
-            blah blah blah
-            
-          </Typography>
+          {/* new section */}
+          <div className="casestudy-section-body">
+            <Typography variant="h5" gutterBottom>
+              <b>Process</b>
+            </Typography>
+            <Divider />
+            <div className="casestudy-section-body">
+              <Typography gutterBottom>
+                Jamboard was used throughout this project as a central hub to
+                share:
+                <ul>
+                  <li>colour scheme</li>
+                  <li>designs</li>
+                  <li>game concepts</li>
+                  <li>ideas for improvement</li>
+                </ul>
+              </Typography>
+              <div className="process-img-container">
+                <Zoom>
+                  <img src={MM3} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM4} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM5} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM6} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM7} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM8} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM9} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM10} className="process-img" alt="" />
+                </Zoom>
+                <Zoom>
+                  <img src={MM11} className="process-img" alt="" />
+                </Zoom>
+              </div>
+            </div>
+          </div>
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
-          </Button>
-        </DialogActions>
       </BootstrapDialog>
     </div>
-  )
-}
+  );
+};
 
-export default PP1
+export default PP1;
