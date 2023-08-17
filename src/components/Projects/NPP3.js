@@ -205,6 +205,7 @@ const NPP3 = () => {
               <Typography gutterBottom></Typography>
               <iframe
                 src="https://docs.google.com/presentation/d/e/2PACX-1vQACRmor2lL4oqTchnWh0LDbyzJGZcSV--Tm89E5b7vxg0dJoVQgFOk5am_QC8dyzhj3NzKptWJ5n4Q/embed?start=false&loop=false&delayms=3000"
+                title="slideshow"
                 frameborder="0"
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
