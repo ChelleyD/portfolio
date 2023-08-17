@@ -142,7 +142,7 @@ const PP1 = () => {
             <Divider />
             <div className="casestudy-section-body">
               <Typography gutterBottom>
-                I spare-headed UI/UX designs, project planning/management and
+                I spear-headed UI/UX designs, project planning/management and
                 front-end programming. Created a themed virtual arcade machine
                 with a team of 2 others. Completed games include:
                 <ul>

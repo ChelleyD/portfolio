@@ -136,7 +136,7 @@ const PP4 = () => {
             <Divider />
             <div className="casestudy-section-body">
               <Typography gutterBottom>
-                Spare-headed UI/UX and implemented a news API on the homepage to
+                Spear-headed UI/UX and implemented a news API on the homepage to
                 update with filtered articles. Created a ReactJS web application
                 to bring awareness to climate change, with a team of 3 others.
               </Typography>
@@ -234,7 +234,10 @@ const PP4 = () => {
             <div className="casestudy-section-body">
               <Typography gutterBottom>
                 <ul>
-                  <li>What I learnt: how to implement asynchronous functions and API calls</li>
+                  <li>
+                    What I learnt: how to implement asynchronous functions and
+                    API calls
+                  </li>
                   {/* <li>Mistakes made:</li>
                   <li>What I would do differently:</li> */}
                 </ul>
