@@ -193,14 +193,14 @@ const PP4 = () => {
             <Divider />
             <div className="casestudy-section-body">
               <Typography gutterBottom></Typography>
-              {/* <iframe
+              <iframe
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
-                src="https://www.youtube.com/embed/AkknY9nAYak"
+                src="https://www.youtube.com/embed/ovelQDFrKpQ"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe> */}
+              ></iframe>
               {/* <a
                 // live demo link
                 href="https://ttp-code-quest.netlify.app/"
