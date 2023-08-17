@@ -17,7 +17,7 @@ const Hero = () => {
         <Typography variant="h5">
           I recently graduated with honours - Magna Cum Laude,
           and obtained a Bachelor’s of Science degree in Computer Science.
-          I am an aspiring web developer who also has interests in...
+          I am an aspiring web developer.
           Learn more about my experience from my 
           {/* update resume file */}
           <a href={Resume} download='Tamika Dantes Resume' className='link'> 

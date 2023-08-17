@@ -1,77 +1,77 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea, Typography } from '@mui/material';
-import Divider from '@mui/material/Divider';
-import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import StudentAmbassador from '../../images/non-programming-project-images/Student Ambassador.png'
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import TestImg from "../../images/programming-project-images/regex-process-images/RE 1.png";
-import Zoom from "react-medium-image-zoom";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea, Typography } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import PropTypes from "prop-types";
+// import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import StudentAmbassador from "../../images/non-programming-project-images/Student Ambassador.png";
+// import TestImg from "../../images/programming-project-images/regex-process-images/RE 1.png";
+// import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-    '& .MuiDialogContent-root': {
-      padding: theme.spacing(2),
-    },
-    '& .MuiDialogActions-root': {
-      padding: theme.spacing(1),
-    },
-  }));
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(2),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
+}));
 
-  function BootstrapDialogTitle(props) {
-    const { children, onClose, ...other } = props;
-  
-    return (
-      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-        {children}
-        {onClose ? (
-          <IconButton
-            aria-label="close"
-            onClick={onClose}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-    );
-  }
-  
-  BootstrapDialogTitle.propTypes = {
-    children: PropTypes.node,
-    onClose: PropTypes.func.isRequired,
-  };
-    
+function BootstrapDialogTitle(props) {
+  const { children, onClose, ...other } = props;
+
+  return (
+    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+      {children}
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </DialogTitle>
+  );
+}
+
+BootstrapDialogTitle.propTypes = {
+  children: PropTypes.node,
+  onClose: PropTypes.func.isRequired,
+};
 
 const NPP2 = () => {
-    const [open, setOpen] = React.useState(false);
-  
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div>
       {/* on click of ActionArea, open modal */}
       <Card sx={{ width: 345 }}>
-        <CardActionArea className="card-wrapper btn-modal" onClick={handleClickOpen}> 
+        <CardActionArea
+          className="card-wrapper btn-modal"
+          onClick={handleClickOpen}
+        >
           <CardMedia
             component="img"
             height="245"
@@ -83,46 +83,41 @@ const NPP2 = () => {
 
           <div className="overlay-right-slide">
             <div className="card-text">
-              <Typography variant='body1'>Student Ambassador</Typography>
-              <Typography variant='caption text'>CS Transfer Students</Typography>
+              <Typography variant="body1">Student Ambassador</Typography>
+              <Typography variant="caption text">
+                CS Transfer Students
+              </Typography>
             </div>
           </div>
         </CardActionArea>
       </Card>
 
-    <BootstrapDialog
+      <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-        fullWidth='true'
-        maxWidth='md'
-        scroll='paper'
+        fullWidth="true"
+        maxWidth="md"
+        scroll="paper"
       >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <Typography variant='h4'>
+        <BootstrapDialogTitle
+          id="customized-dialog-title"
+          onClose={handleClose}
+        >
+          <Typography variant="h4">
             <b>Student Ambassador</b>
           </Typography>
           <Typography>
-            <b>Timeline:</b>
-          </Typography>
-          <Stack direction="row" spacing={1}>
-            <Typography>
-              <b>Languages:</b>
-            </Typography>
-            <Chip label="HTML" sx={{ bgcolor: "lightblue" }} size="small" />
-            <Chip label="CSS" sx={{ bgcolor: "lightgreen" }} size="small" />
-            <Chip label="jQuery" sx={{ bgcolor: "pink" }} size="small" />
-            <Chip label="JavaScript" color="default" size="small" />
-          </Stack>
-          <Typography>
-            <b>Languages:</b> HTML | CSS | jQuery | JavaScript
+            <b>Timeline:</b> in progress
           </Typography>
           <Typography>
-            <b>Roles:</b> UI Designer | Front End Developer | Project Manager
+            <b>Subject:</b> CS Transfer Students
           </Typography>
           <Typography>
-            <b>Tools:</b> Adobe Photoshop | Mterialize CSS | Jamboard | Replit |
-            GitHub
+            <b>Roles:</b> Student Ambassador
+          </Typography>
+          <Typography>
+            <b>Tools:</b> Google Forms
           </Typography>
         </BootstrapDialogTitle>
 
@@ -134,7 +129,11 @@ const NPP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                Enhanced the experience of CS transfer students at MEC by
+                providing administrative assistance including course
+                registration, financial aid, and academic advising.
+              </Typography>
             </div>
           </div>
 
@@ -145,7 +144,10 @@ const NPP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                Transfer students are unaware of campus resources and how to use
+                them.
+              </Typography>
             </div>
           </div>
 
@@ -156,9 +158,10 @@ const NPP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
-
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                A team of students and faculty was assembled to reach out to
+                existing transfer students, assess the situation and remedy it.
+              </Typography>
             </div>
           </div>
 
@@ -169,8 +172,8 @@ const NPP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah blah blah</Typography>
-              <iframe
+              <Typography gutterBottom>coming soon</Typography>
+              {/* <iframe
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
                 src="https://www.youtube.com/embed/AkknY9nAYak"
@@ -198,13 +201,13 @@ const NPP2 = () => {
                 <Button variant="text" sx={{ textTransform: "capitalize" }}>
                   Source Code
                 </Button>
-              </a>
+              </a> */}
             </div>
           </div>
 
           {/* new section */}
           <div className="casestudy-section-body">
-            <Typography variant="h5" gutterBottom>
+            {/* <Typography variant="h5" gutterBottom>
               <b>Key Takeaways</b>
             </Typography>
             <Divider />
@@ -216,12 +219,12 @@ const NPP2 = () => {
                   <li>What I would do differently:</li>
                 </ul>
               </Typography>
-            </div>
+            </div> */}
           </div>
 
           {/* new section */}
           <div className="casestudy-section-body">
-            <Typography variant="h5" gutterBottom>
+            {/* <Typography variant="h5" gutterBottom>
               <b>Process</b>
             </Typography>
             <Divider />
@@ -244,12 +247,12 @@ const NPP2 = () => {
                   <img src={TestImg} className="process-img" alt="" />
                 </Zoom>
               </div>
-            </div>
+            </div> */}
           </div>
         </DialogContent>
       </BootstrapDialog>
     </div>
-  )
-}
+  );
+};
 
-export default NPP2
+export default NPP2;

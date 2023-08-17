@@ -12,8 +12,6 @@ import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import RegEx from "../../images/programming-project-images/Reg-Ex Puzzle.png";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import RE1 from "../../images/programming-project-images/regex-process-images/RE 1.png";
 import RE2 from "../../images/programming-project-images/regex-process-images/RE 2.png";
 import RE3 from "../../images/programming-project-images/regex-process-images/RE 3.png";
@@ -114,17 +112,8 @@ const PP2 = () => {
             <b>Reg-Ex Puzzle</b>
           </Typography>
           <Typography>
-            <b>Timeline:</b>
+            <b>Timeline:</b> 2 weeks
           </Typography>
-          <Stack direction="row" spacing={1}>
-            <Typography>
-              <b>Languages:</b>
-            </Typography>
-            <Chip label="HTML" sx={{ bgcolor: "lightblue" }} size="small" />
-            <Chip label="CSS" sx={{ bgcolor: "lightgreen" }} size="small" />
-            <Chip label="jQuery" sx={{ bgcolor: "pink" }} size="small" />
-            <Chip label="JavaScript" color="default" size="small" />
-          </Stack>
           <Typography>
             <b>Languages:</b> HTML | CSS | jQuery | JavaScript
           </Typography>
@@ -132,8 +121,7 @@ const PP2 = () => {
             <b>Roles:</b> UI Designer | Front End Developer | Project Manager
           </Typography>
           <Typography>
-            <b>Tools:</b> Adobe Photoshop | Mterialize CSS | Jamboard | Replit |
-            GitHub
+            <b>Tools:</b> Mterialize CSS | Replit | GitHub | Adobe Xd
           </Typography>
         </BootstrapDialogTitle>
 
@@ -145,7 +133,13 @@ const PP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                Created a regular expressions crossword puzzle, with 3 different
+                levels, using HTML, CSS and Javascript. This project stood out
+                among the others as I received some praises from the professor
+                after I delivered my presentation. After successful completion,
+                I obtained a grade ‘A’.
+              </Typography>
             </div>
           </div>
 
@@ -156,7 +150,18 @@ const PP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                The prompt for this project was as follows:
+                <blockquote>
+                  Be creative and work on a project to apply the skills learnt
+                  in class. Namely:
+                  <ul>
+                    <li>bash</li>
+                    <li>reg ex</li>
+                    <li>sed</li>
+                  </ul>
+                </blockquote>
+              </Typography>
             </div>
           </div>
 
@@ -167,9 +172,25 @@ const PP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                I decided to combine my newly acquired skills from web
+                development with that of regular expressions since it is
+                compatible with JavaScript.
+              </Typography>
 
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                After some research, the idea of doing a regular expression
+                crossword puzzle was finalised.
+              </Typography>
+
+              <Typography gutterBottom>
+                How to play: Use your knowledge of regular expressions to get
+                through levels. Levels comprise of boxes, where each box has a
+                row and column value. Your input must simultaneously satisfy
+                both regular expressions. If your input is valid, the box will
+                turn green after clicking on the submit button. To enable the
+                "next" button, all boxes must be turned green.
+              </Typography>
             </div>
           </div>
 
@@ -180,18 +201,18 @@ const PP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah blah blah</Typography>
-              <iframe
+              <Typography gutterBottom></Typography>
+              {/* <iframe
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
                 src="https://www.youtube.com/embed/AkknY9nAYak"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe>
+              ></iframe> */}
               <a
                 // live demo link
-                href="https://ttp-code-quest.netlify.app/"
+                href="https://regex-puzzle-265.netlify.app"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -202,7 +223,7 @@ const PP2 = () => {
               |
               <a
                 // source code link
-                href="https://github.com/ChelleyD/ChelleyD.github.io"
+                href="https://github.com/ChelleyD/regex-puzzle"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -222,9 +243,15 @@ const PP2 = () => {
             <div className="casestudy-section-body">
               <Typography gutterBottom>
                 <ul>
-                  <li>What I learnt:</li>
-                  <li>Mistakes made:</li>
-                  <li>What I would do differently:</li>
+                  <li>
+                    What I learnt: how to implement reg ex in JS, comparing
+                    stored values with user input
+                  </li>
+                  <li>Mistakes made: not making application more responsive</li>
+                  <li>
+                    What I would do differently: use another method to position
+                    boxes and text on screen
+                  </li>
                 </ul>
               </Typography>
             </div>
@@ -237,7 +264,7 @@ const PP2 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>Adobe Xd was used to create a mockup for this project:</Typography>
               <div className="process-img-container">
                 <Zoom>
                   <img src={RE1} className="process-img" alt="" />

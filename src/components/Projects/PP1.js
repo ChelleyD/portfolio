@@ -12,8 +12,6 @@ import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import ArcadeGame from "../../images/programming-project-images/Blips and Chitz Arcade Game.png";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import MM3 from "../../images/programming-project-images/bnc-arcade-process-images/MM 3.png";
 import MM4 from "../../images/programming-project-images/bnc-arcade-process-images/MM 4.png";
 import MM5 from "../../images/programming-project-images/bnc-arcade-process-images/MM 5.png";
@@ -123,15 +121,6 @@ const PP1 = () => {
           <Typography>
             <b>Timeline:</b> 3 weeks
           </Typography>
-          <Stack direction="row" spacing={1}>
-            <Typography>
-              <b>Languages:</b>
-            </Typography>
-            <Chip label="HTML" sx={{ bgcolor: "lightblue" }} size="small" />
-            <Chip label="CSS" sx={{ bgcolor: "lightgreen" }} size="small" />
-            <Chip label="jQuery" sx={{ bgcolor: "pink" }} size="small" />
-            <Chip label="JavaScript" color="default" size="small" />
-          </Stack>
           <Typography>
             <b>Languages:</b> HTML | CSS | jQuery | JavaScript
           </Typography>
@@ -154,19 +143,20 @@ const PP1 = () => {
             <div className="casestudy-section-body">
               <Typography gutterBottom>
                 I spare-headed UI/UX designs, project planning/management and
-                front-end programming. With a team of 2 others, created a themed
-                virtual arcade machine. Completed games include:
+                front-end programming. Created a themed virtual arcade machine
+                with a team of 2 others. Completed games include:
                 <ul>
                   <li>Prison Break (Speed Typing)</li>
                   <li>Wrenches & Gears (Tic-Tac-Toe)</li>
                 </ul>
-                I also contributed to some of the games’ logic code/features.
-                Due to limited time and knowledge, we were unable to complete
-                the project before the end of the bootcamp. However, I …….
+                I also provided some valuable input towards some of the games’
+                logic code and features. Due to limited time and knowledge, the
+                project was not completed in its entity before the end of the
+                bootcamp.
               </Typography>
             </div>
           </div>
-          
+
           {/* new section */}
           <div className="casestudy-section">
             <Typography variant="h5" gutterBottom>
@@ -219,15 +209,15 @@ const PP1 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah blah blah</Typography>
-              <iframe
+              <Typography gutterBottom></Typography>
+              {/* <iframe
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
                 src="https://www.youtube.com/embed/AkknY9nAYak"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe>
+              ></iframe> */}
               <a
                 href="https://ttp-code-quest.netlify.app/"
                 target="_blank"
@@ -239,7 +229,7 @@ const PP1 = () => {
               </a>{" "}
               |
               <a
-                href="https://github.com/ChelleyD/ChelleyD.github.io"
+                href="https://github.com/ChelleyD/blips-and-chitz-arcade-game"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -271,9 +261,9 @@ const PP1 = () => {
                     this, I researched drawing with CSS.
                   </li>
                   <li>
-                    What I would do differently: project might have been too
-                    ambitious given time frame and skill level so I’d scale back
-                    or choose simpler games.
+                    What I would do differently: I’d scale back or choose
+                    simpler games since the project might have been too
+                    ambitious given the time frame and skill level.
                   </li>
                 </ul>
               </Typography>

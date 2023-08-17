@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea, Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -12,10 +12,8 @@ import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import CalcDatabase from "../../images/non-programming-project-images/Calculus 3 Database Management.png";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import TestImg from "../../images/programming-project-images/regex-process-images/RE 1.png";
-import Zoom from "react-medium-image-zoom";
+// import TestImg from "../../images/programming-project-images/regex-process-images/RE 1.png";
+// import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -110,26 +108,16 @@ const NPP1 = () => {
             <b>Calculus 3 Database Management</b>
           </Typography>
           <Typography>
-            <b>Timeline:</b>
-          </Typography>
-          <Stack direction="row" spacing={1}>
-            <Typography>
-              <b>Languages:</b>
-            </Typography>
-            <Chip label="HTML" sx={{ bgcolor: "lightblue" }} size="small" />
-            <Chip label="CSS" sx={{ bgcolor: "lightgreen" }} size="small" />
-            <Chip label="jQuery" sx={{ bgcolor: "pink" }} size="small" />
-            <Chip label="JavaScript" color="default" size="small" />
-          </Stack>
-          <Typography>
-            <b>Languages:</b> HTML | CSS | jQuery | JavaScript
+            <b>Timeline:</b> in progress
           </Typography>
           <Typography>
-            <b>Roles:</b> UI Designer | Front End Developer | Project Manager
+            <b>Subject:</b> Calculus 3
           </Typography>
           <Typography>
-            <b>Tools:</b> Adobe Photoshop | Mterialize CSS | Jamboard | Replit |
-            GitHub
+            <b>Roles:</b> Database Manager
+          </Typography>
+          <Typography>
+            <b>Tools:</b> Maple | Maple TA
           </Typography>
         </BootstrapDialogTitle>
 
@@ -141,7 +129,10 @@ const NPP1 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                Managed and analyzed database of Calculus 3 questions for the
+                seamless experience of future students
+              </Typography>
             </div>
           </div>
 
@@ -152,7 +143,10 @@ const NPP1 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                Some questions in the database had incorrect solutions which led
+                to confused and frustrated students.
+              </Typography>
             </div>
           </div>
 
@@ -163,9 +157,10 @@ const NPP1 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah</Typography>
-
-              <Typography gutterBottom>blah</Typography>
+              <Typography gutterBottom>
+                Manually go through the database of questions to check
+                solutions. Use HTML and LaTex to update the question bank.
+              </Typography>
             </div>
           </div>
 
@@ -176,8 +171,8 @@ const NPP1 = () => {
             </Typography>
             <Divider />
             <div className="casestudy-section-body">
-              <Typography gutterBottom>blah blah blah</Typography>
-              <iframe
+              <Typography gutterBottom>coming soon</Typography>
+              {/* <iframe
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
                 src="https://www.youtube.com/embed/AkknY9nAYak"
@@ -205,13 +200,13 @@ const NPP1 = () => {
                 <Button variant="text" sx={{ textTransform: "capitalize" }}>
                   Source Code
                 </Button>
-              </a>
+              </a> */}
             </div>
           </div>
 
           {/* new section */}
           <div className="casestudy-section-body">
-            <Typography variant="h5" gutterBottom>
+            {/* <Typography variant="h5" gutterBottom>
               <b>Key Takeaways</b>
             </Typography>
             <Divider />
@@ -223,12 +218,12 @@ const NPP1 = () => {
                   <li>What I would do differently:</li>
                 </ul>
               </Typography>
-            </div>
+            </div> */}
           </div>
 
           {/* new section */}
           <div className="casestudy-section-body">
-            <Typography variant="h5" gutterBottom>
+            {/* <Typography variant="h5" gutterBottom>
               <b>Process</b>
             </Typography>
             <Divider />
@@ -251,7 +246,7 @@ const NPP1 = () => {
                   <img src={TestImg} className="process-img" alt="" />
                 </Zoom>
               </div>
-            </div>
+            </div> */}
           </div>
         </DialogContent>
       </BootstrapDialog>
