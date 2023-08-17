@@ -203,14 +203,15 @@ const NPP3 = () => {
             <Divider />
             <div className="casestudy-section-body">
               <Typography gutterBottom></Typography>
-              {/* <iframe
+              <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQACRmor2lL4oqTchnWh0LDbyzJGZcSV--Tm89E5b7vxg0dJoVQgFOk5am_QC8dyzhj3NzKptWJ5n4Q/embed?start=false&loop=false&delayms=3000"
+                frameborder="0"
                 width="100%"
                 style={{ aspectRatio: "16/9" }}
-                src="https://www.youtube.com/embed/AkknY9nAYak"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe> */}
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+              ></iframe>
               {/* <a
                 // live demo link
                 href="https://ttp-code-quest.netlify.app/"
@@ -244,7 +245,10 @@ const NPP3 = () => {
             <div className="casestudy-section-body">
               <Typography gutterBottom>
                 <ul>
-                  <li>What I learnt: financial reporting, marketing strategies, presenting in a professional environment</li>
+                  <li>
+                    What I learnt: financial reporting, marketing strategies,
+                    presenting in a professional environment
+                  </li>
                   {/* <li>Mistakes made:</li>
                   <li>What I would do differently:</li> */}
                 </ul>
